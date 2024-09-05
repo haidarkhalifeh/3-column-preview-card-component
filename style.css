@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+:root {
+--Brightorange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--Verydarkcyan: hsl(179, 100%, 13%);
+
+--Transparentwhite /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+--Verylightgray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+}
+
+
+
+body {
+    padding: 50px 20px;
+    background-color: var(--Verylightgray);
+    font-family: "Lexend Deca", sans-serif;
+    
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+    
+}
+
+.cards {
+    
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;     
+
+}
+
+.cards .column {
+    padding: 40px 30px 40px 40px;
+    display: grid;
+    grid-template-rows: 10% 70% 20%;
+   
+}
+
+.cards .sedans {
+    --bg-color : var(--Brightorange);
+    background-color:var(--bg-color);
+}
+
+.cards .suvs {
+    --bg-color : var(--Darkcyan);
+    background-color: var(--bg-color);
+}
+
+.cards .luxury {
+    --bg-color : var(--Verydarkcyan);
+    background-color: var(--bg-color);
+}
+
+h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: var(--Verylightgray);
+    font-weight: 600;
+    margin: 30px auto;
+
+}
+
+p {
+    color:var(--Transparentwhite);
+    line-height: 1.7;  
+}
+
+.cards .column-button {
+    background-color: var(--Verylightgray);
+    text-transform: capitalize ;
+    color:var(--bg-color);
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding:16px 32px;
+    font-size: 18px;
+    font-weight: 580;
+    margin: 10px auto 12px auto;
+
+    
+}
+
+.cards .column-button:hover {
+    background-color: transparent;
+    color:var(--Verylightgray);
+    border-color: var(--Verylightgray);
+    cursor: pointer;
+}
+
+@media only screen and (min-width:769px) {
+    .cards {
+        flex-direction: row;
+    }
+    p {
+        margin: 15% 0 30%; 
+    }
+    body {
+
+        padding: 80px 200px;
+    }
+}
